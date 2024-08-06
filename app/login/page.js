@@ -12,9 +12,9 @@ const Login = () => {
     const router = useRouter()
     const [state, formAction] = useFormState(authenticate, undefined);
     const [show, setShow] = useState(false)
-    const handleLogin = ()=> toast.error("Sorry Can't Login Now")
+    const handleLogin = ()=> toast.warning("Sorry Can't Login Using Google")
     useEffect(() => {
-        if (state === 'Wrong Credentials!') {
+        if (state === 'Wrong Email or Password!') {
             toast.error(state);
         }else if(state === 'Login Successfully'){
             toast.success(state)
@@ -24,7 +24,7 @@ const Login = () => {
 
     return (
         <div className="background w-full h-full">
-            <ToastContainer/>
+            <ToastContainer theme="colored"/>
             <div className="mx-auto border border-gray-200 w-[370px] h-[560px] sm:w-[400px] sm:h-[570px] px-6 mt-[1rem] rounded-lg bg-transparent mb-[3rem] ">
                 <form action={formAction}>
                 <div className=" mt-[2rem] ">
@@ -35,11 +35,11 @@ const Login = () => {
                 </div>
                 <div className="mb-2">
                     <label htmlFor="" className="text-white font-bold text-[18px]">Email</label><br />
-                    <input type="text" placeholder="www.example123@gmail.com" name="email" className="w-full px-4 py-2" />
+                    <input type="text" placeholder="www.example123@gmail.com" name="email" className="w-full px-4 py-2" required />
                 </div>
                 <div className="mb-8 relative">
                     <label htmlFor=""className="text-white font-bold text-[18px]" >Password</label><br />
-                    <input  type={show? 'text' : 'password' } placeholder="Password" name="password" className="w-full px-4 py-2 " />
+                    <input  type={show? 'text' : 'password' } placeholder="Password" name="password" className="w-full px-4 py-2 " required />
                     {
                         show? 
                         <LuEyeOff onClick={()=>setShow(!show)} className="absolute top-8 right-2 text-black w-7 h-7  cursor-pointer" />
