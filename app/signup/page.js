@@ -34,7 +34,7 @@ const Signup = () => {
   return (
     <div className="background w-full h-full">
       <form onSubmit={handleSubmit}>
-        <div className="mx-auto border border-gray-200 w-[370px] h-[650px] sm:w-[400px] sm:h-[650px] px-6 mt-[1rem] rounded-lg bg-transparent mb-[3rem]">
+        <div className="mx-auto border border-gray-200 w-[370px] h-[670px] sm:w-[400px] sm:h-[670px] px-6 mt-[1rem] rounded-lg bg-transparent mb-[3rem]">
           <div className="mt-[2rem]">
             <h2 className="text-center text-white font-bold text-2xl">Sign Up</h2>
           </div>
