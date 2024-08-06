@@ -114,8 +114,8 @@ const Navbar = () => {
                     <div className='flex left-0 py-2 px-4 gap-4 md:gap-6'>
                         <div className='relative'>
                             <Link href={'/profile'}><BiUser fill='black' className=' w-8 h-8 cursor-pointer' /></Link>
-                            <div className='absolute bg-red-600 rounded-full top-0 right-0 w-4 h-4 text-[10px] grid place-items-center translate-x-1 -translate-y-1'>
-                                <span className='font-bold'>0</span>
+                             <div className='absolute bg-red-600 rounded-full top-1 right-[7px] w-2 h-2 text-[10px] grid place-items-center translate-x-1 -translate-y-1'>
+                                {/* <span className='font-bold'>0</span> */}
                             </div>
                         </div>
                         <div className='relative'>
