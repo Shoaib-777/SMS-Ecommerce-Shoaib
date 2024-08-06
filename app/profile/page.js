@@ -45,7 +45,7 @@ const Profile = async () => {
             <div className="bg-white shadow-lg rounded-lg p-6 md:p-12 max-w-4xl w-full">
                 <div className="flex flex-col md:flex-row md:space-x-6">
                     <div className="flex flex-col items-center mb-6 md:mb-0">
-                        <img className="w-[150px] h-[150px] rounded-full object-cover border-4 border-blue-500" src={user.img} alt="User Image"/>
+                        <img className="w-[150px] h-[150px] rounded-full object-cover border-4 border-blue-500" src={user.img || 'https://www.shutterstock.com/shutterstock/photos/1153673752/display_1500/stock-vector-profile-placeholder-image-gray-silhouette-no-photo-1153673752.jpg'} alt="User Image"/>
                         <h2 className="text-2xl font-bold text-gray-800 mt-4">{user.username}</h2>
                         <p className="text-gray-600">{user.email}</p>
                     </div>
