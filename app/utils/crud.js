@@ -34,7 +34,7 @@ export const AddUserf = async (formData,profiles) => {
           toast.success('Login Successfully');
       } catch (err) {
           if (err.message.includes('CredentialsSignin')) {
-              return 'Wrong Credentials!';
+              return 'Invalid Email or Password!';
           }
           if (!err.message.includes('CredentialsSignin')) {
               return 'Login Successfully';
